@@ -1,0 +1,21 @@
+{
+  "name": "guru",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "any"
+  },
+  "repository": {
+    "type": "git",
+    "url": "guru"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "gc",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
