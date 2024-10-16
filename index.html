@@ -9,16 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/icon.jpeg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	  <style>
+	 <style>
     /* Centering the globe div at the bottom */
     #globe-container {
-        width: 125px;         /* Set width */
-        height: 125px;        /* Set height */
+        width: 125px;         /* Set the width */
+        height: 125px;        /* Set the height */
         position: fixed;      /* Position the div relative to the viewport */
         bottom: 0;            /* Align it at the bottom */
         left: 50%;            /* Align it horizontally to the center */
         transform: translateX(-50%); /* Shift it back to center since left is 50% */
         text-align: center;   /* Center contents inside the div */
+        overflow: hidden;     /* Ensure the globe does not overflow */
+    }
+
+    #clstr_globe {
+        width: 100%;  /* Restrict the globe's width to the container */
+        height: 100%; /* Restrict the globe's height to the container */
     }
 </style>
     
@@ -4062,8 +4068,8 @@ for Topologically Varying Neural Radiance Fields</span>
         </td>
       </tr>
     </table>
-	      <div class="globe-container">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z9Am9HpCBXHtDa9qXcNQebKwy5rJZAgJab56Vw11hA0"></script>
-    </div>
+	      <div id="globe-container">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z9Am9HpCBXHtDa9qXcNQebKwy5rJZAgJab56Vw11hA0"></script>
+</div>
   </body>
 </html>
