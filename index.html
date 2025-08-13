@@ -29,11 +29,75 @@
         width: 100%;  /* Restrict the globe's width to the container */
    /*     height: 100%; /* Restrict the globe's height to the container */
  /*   } */
+
+      /* Navigation styles */
+      .nav-container {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .nav-menu {
+        display: inline-block;
+      }
+      
+      .nav-menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 20px;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+      
+      .nav-menu a:hover {
+        color: #0066cc;
+      }
+      
+      .nav-menu a.active {
+        color: #0066cc;
+        font-weight: 600;
+      }
+      
+      .nav-menu a.active::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #0066cc;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 600px) {
+        .nav-menu a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+      }
 </style> 
     
   </head>
 
   <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          
+          <!-- Navigation Menu -->
+          <div class="nav-container">
+            <div class="nav-menu">
+              <a href="index.html" class="active">Home</a>
+              <a href="research.html">Research</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
