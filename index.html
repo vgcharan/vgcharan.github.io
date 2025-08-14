@@ -32,7 +32,7 @@
 
       /* Navigation styles */
 		
-   /*   .nav-container {
+      .nav-container {
         width: 100%;
         text-align: center;
         padding: 20px 0;
@@ -76,7 +76,7 @@
       }
 
       /* Section styles */
-     /*  .section {
+       .section {
         display: none;
       }
       
@@ -85,186 +85,21 @@
       }
 
       /* Mobile responsive */
-		/* 
+		/
        @media (max-width: 600px) {
         .nav-menu a {
           margin: 0 10px;
           font-size: 14px;
         }
-      }  */
-:root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --secondary-text: #666666;
-            --border-color: #dddddd;
-            --link-color: #0066cc;
-            --hover-bg: #f8f9fa;
-            --nav-border: #ddd;
-            --table-bg: #ffffff;
-        }
+      }  
 
-        /* Dark mode */
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --secondary-text: #b0b0b0;
-            --border-color: #404040;
-            --link-color: #66b3ff;
-            --hover-bg: #2a2a2a;
-            --nav-border: #404040;
-            --table-bg: #1a1a1a;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Theme toggle button */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--hover-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        /* Update existing styles to use theme variables */
-        h1, h2, h3, .name {
-            color: var(--text-color) !important;
-        }
-
-        p {
-            color: var(--secondary-text);
-        }
-
-        a {
-            color: var(--link-color);
-        }
-
-        a:hover {
-            color: var(--link-color);
-        }
-
-        .papertitle {
-            color: var(--text-color);
-        }
-
-        table {
-            background-color: var(--table-bg);
-        }
-
-        td {
-            color: var(--text-color);
-        }
-
-        /* Navigation styles */
-        .nav-container {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--nav-border);
-        }
         
-        .nav-menu {
-            display: inline-block;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 16px;
-            font-weight: 500;
-            margin: 0 20px;
-            padding: 10px 0;
-            transition: color 0.3s ease;
-            position: relative;
-            cursor: pointer;
-        }
-        
-        .nav-menu a:hover {
-            color: var(--link-color);
-        }
-        
-        .nav-menu a.active {
-            color: var(--link-color);
-            font-weight: 600;
-        }
-        
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: var(--link-color);
-        }
-
-        /* Section styles */
-        .section {
-            display: none;
-        }
-        
-        .section.active {
-            display: block;
-        }
-
-        /* Table styling for courses */
-        table thead tr {
-            background-color: var(--hover-bg) !important;
-        }
-
-        table tbody tr:nth-child(even) {
-            background-color: var(--hover-bg) !important;
-        }
-
-        table td, table th {
-            border: 1px solid var(--border-color) !important;
-            color: var(--text-color) !important;
-        }
-
-        /* Mobile responsive */
-        @media (max-width: 600px) {
-            .nav-menu a {
-                margin: 0 10px;
-                font-size: 14px;
-            }
-            
-            .theme-toggle {
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
-                top: 15px;
-                right: 15px;
-            }
-        }
 		
 </style> 
     
   </head> 
 
   <body>
-	  <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle">
-        🌙
-    </button>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px"> 
@@ -293,10 +128,10 @@
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:vgc@pm.me">Email</a> &nbsp;/&nbsp;
-                    <a href="data/CV_vgurucharan.pdf">CV</a> &nbsp;/&nbsp;
+              <a href="https://www.linkedin.com/in/vgurucharan/">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="https://x.com/DrVGCharan">Twitter</a> &nbsp;/&nbsp;
                     <a href="https://scholar.google.co.in/citations?user=7vmyl_IAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/vgurucharan/">LinkedIn</a> &nbsp;/&nbsp;
-                    <a href="https://x.com/DrVGCharan">Twitter</a>
+					  <a href="data/CV_vgurucharan.pdf">CV</a>
                   </p>
                 </td>
                 <td style="padding:2.5%;width:40%;max-width:40%">
