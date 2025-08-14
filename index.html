@@ -31,7 +31,7 @@
  /*   } */
 
       /* Navigation styles */
-      .nav-container {
+     .nav-container {
         width: 100%;
         text-align: center;
         padding: 20px 0;
@@ -52,6 +52,7 @@
         padding: 10px 0;
         transition: color 0.3s ease;
         position: relative;
+        cursor: pointer;
       }
       
       .nav-menu a:hover {
@@ -73,6 +74,15 @@
         background-color: #0066cc;
       }
 
+      /* Section styles */
+      .section {
+        display: none;
+      }
+      
+      .section.active {
+        display: block;
+      }
+
       /* Mobile responsive */
       @media (max-width: 600px) {
         .nav-menu a {
@@ -92,176 +102,333 @@
           <!-- Navigation Menu -->
           <div class="nav-container">
             <div class="nav-menu">
-              <a href="index.html" class="active">Home</a>
-              <a href="research.html">Research</a>
-              <a href="about.html">About</a>
-              <a href="contact.html">Contact</a>
+              <a onclick="showSection('home')" class="active" id="home-nav">Home</a>
+              <a onclick="showSection('research')" id="research-nav">Research</a>
+              <a onclick="showSection('teaching')" id="teaching-nav">Teaching</a>
+              <a onclick="showSection('personal')" id="personal-nav">Personal Pursuits</a>
             </div>
           </div>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  V. Gurucharan
-                </p>
-                <p>I'm the Chief AI Officer at <a href="https://www.collaborativedynamics.ai/">Collaborative Dynamics</a>, a startup based in Texas, US.  I did my PhD in String theory at <a href="https://www.dei.ac.in/dei/">Dayalbagh Educational Institute</a>, where I was advised by <a href="https://scholar.google.co.in/citations?user=0sqkhI8AAAAJ&hl=en"> Dr. Shiroman Prakash</a>.
-                <p>
-                   
-                </p>I'm interested in deep learning and natural language processing (NLP).  I’m always open to collaborations, partnerships and projects in these fields—feel free to reach out! 
-                </p>
-                <p style="text-align:center">
-		
-		<a href="mailto:vgc@pm.me">Email</a> &nbsp;/&nbsp
-                  <a href="data/CV_vgurucharan.pdf">CV</a> &nbsp;<!-- /&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;--> /&nbsp;
-                  <a href="https://scholar.google.co.in/citations?user=7vmyl_IAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/vgurucharan/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://x.com/DrVGCharan">Twitter</a> &nbsp; <!-- /&nbsp;
-                <!--  <a href="https://github.com/jonbarron/">Github</a> -->
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/pix.jpg">
-                  <img style="width:85%;max-width:85%;object-fit: cover; border-radius: 50%; float: left;" alt="profile photo" src="images/pix.jpg" class="hoverZoomLink">
-                </a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <!-- HOME SECTION -->
+          <div id="home" class="section active">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align: center;">
+                    V. Gurucharan
+                  </p>
+                  <p>I'm the Chief AI Officer at <a href="https://www.collaborativedynamics.ai/">Collaborative Dynamics</a>, a startup based in Texas, US. I did my PhD in String theory at <a href="https://www.dei.ac.in/dei/">Dayalbagh Educational Institute</a>, where I was advised by <a href="https://scholar.google.co.in/citations?user=0sqkhI8AAAAJ&hl=en"> Dr. Shiroman Prakash</a>.
+                  </p>
+                  <p>I'm interested in deep learning and natural language processing (NLP). I'm always open to collaborations, partnerships and projects in these fields—feel free to reach out! 
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:vgc@pm.me">Email</a> &nbsp;/&nbsp;
+                    <a href="data/CV_vgurucharan.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.co.in/citations?user=7vmyl_IAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/vgurucharan/">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="https://x.com/DrVGCharan">Twitter</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:40%;max-width:40%">
+                  <a href="images/pix.jpg">
+                    <img style="width:85%;max-width:85%;object-fit: cover; border-radius: 50%; float: left;" alt="profile photo" src="images/pix.jpg" class="hoverZoomLink">
+                  </a>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Research Overview</h2>
+                  <p>
+                    My research is currently focused on advancing the capabilities of large language models (LLMs). I am also engaged in enhancing the security of LLMs. I have published work spanning from theoretical physics (string theory, Chern-Simons theories) to applied AI research.
+                  </p>
+                  <p>
+                    <a onclick="showSection('research')" style="cursor: pointer; color: #0066cc;">View all publications →</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Recent Updates</h2>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;"><strong>Dec 2024:</strong> New paper "Can LLMs faithfully generate their layperson-understandable 'self'?" on arXiv</li>
+                    <li style="margin-bottom: 10px;"><strong>Jun 2024:</strong> Published "LaMSUM: A Novel Framework for Extractive Summarization" on arXiv</li>
+                    <li style="margin-bottom: 10px;"><strong>2024:</strong> Joined Collaborative Dynamics as Chief AI Officer</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+
+          <!-- RESEARCH SECTION -->
+          <div id="research" class="section">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Research</h2>
+                  <p>
+                    My research spans from theoretical physics to applied artificial intelligence. Currently, I focus on advancing the capabilities of large language models (LLMs) and enhancing their security. My work bridges fundamental theoretical concepts with practical applications in AI and machine learning.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
               <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  My research is currently focused on advancing the capabilities of large language models (LLMs). I am also engaged in enhancing the security of LLMs.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/request.png' width=100%>
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Can LLMs faithfully generate their layperson-understandable 'self'?: A Case Study in High-Stakes Domains</span>
+                  <br>
+                  <a>Arion Das</a>,
+                  <a>Asutosh Mishra</a>, 
+                  <a>Amitesh Patel</a>, 
+                  <a>Soumilya De</a>,
+                  <strong>V. Gurucharan</strong>,
+                  <a href="https://www.iiserkol.ac.in/web/en/people/faculty/cds/kripaghosh/">Kripabandhu Ghosh</a>
+                  <br>
+                  <em></em> 2024
+                  <br>
+                  <a href="https://arxiv.org/abs/2412.07781">arXiv</a>
+                  <p></p>
+                </td>
+              </tr>
 
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/img1.jpg' width=100%>
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">LaMSUM: A Novel Framework for Extractive Summarization of User Generated Content using LLMs</span>
+                  <br>
+                  <a href="https://garimachhikara128.github.io/">Garima Chhikara</a>,
+                  <a>Anurag Sharma</a>,
+                  <strong>V. Gurucharan</strong>,
+                  <a href="https://www.iiserkol.ac.in/web/en/people/faculty/cds/kripaghosh/">Kripabandhu Ghosh</a>,
+                  <a href="https://cse.iitkgp.ac.in/~abhijnan/">Abhijnan Chakraborty</a>
+                  <br>
+                  <em></em> 2024
+                  <br>
+                  <a href="https://arxiv.org/abs/2406.15809">arXiv</a>
+                  <p></p>
+                </td>
+              </tr>
 
-  <tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/request.png' width=100%>
-    </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <span class="papertitle">Can LLMs faithfully generate their layperson-understandable 'self'?: A Case Study in High-Stakes Domains</span>
-        </a>
-        <br>
-        <a>Arion Das</a>,
-	<a>Asutosh Mishra</a>, 
-	<a>Amitesh Patel</a>, 
-	<a>Soumilya De</a>,
-		<strong>V. Gurucharan</strong>,
-	              <a href="https://www.iiserkol.ac.in/web/en/people/faculty/cds/kripaghosh/">Kripabandhu Ghosh</a>
-        <br>
-        <em></em> 2024
-        <br>
-        <a href="https://arxiv.org/abs/2412.07781">arXiv</a>
-        <p></p>
-      </td>
-    </tr>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/img2.jpg' width="100%">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
+                  <div style="position: relative; top: -25px;"> 
+                    <span class="papertitle">On the higher spin spectrum of Chern-Simons theory coupled to fermions in the large flavour limit</span>
+                    <br>
+                    <strong>V. Gurucharan</strong>,
+                    <a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>
+                    <br>
+                    <em>Journal of High Energy Physics</em>, 2018
+                    <br>
+                    <a href="https://link.springer.com/article/10.1007/JHEP02(2018)094">Springer</a>
+                    <p></p>
+                  </div>
+                </td>
+              </tr>
 
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/img3.jpg' width="100%">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
+                  <div style="position: relative; top: -40px;"> 
+                    <span class="papertitle">On the higher-spin spectrum in large N Chern-Simons vector models</span>
+                    <br>
+                    <a href="https://phy.princeton.edu/people/simone-giombi">Simone Giombi</a>,
+                    <strong>V. Gurucharan</strong>,
+                    <a href="https://scholar.google.com/citations?user=AWulZwUAAAAJ&hl=en">Vladimir Kirilin</a>,
+                    <a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>,
+                    <a href="https://web.umons.ac.be/pucg/en/team/skvortsov/">Evgeny Skvortsov</a>
+                    <br>
+                    <em>Journal of High Energy Physics</em>, 2017
+                    <br>
+                    <a href="https://link.springer.com/article/10.1007/JHEP01(2017)058">Springer</a>
+                    <p></p>
+                  </div>
+                </td>
+              </tr>
 
-		  
-   <tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/img1.jpg' width=100%>
-    </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <span class="papertitle">LaMSUM: A Novel Framework for Extractive Summarization of User Generated Content using LLMs</span>
-        </a>
-        <br>
-        <a href="https://garimachhikara128.github.io/">Garima Chhikara</a>,
-        <a>Anurag Sharma</a>,
-		<strong>V. Gurucharan</strong>,
-	              <a href="https://www.iiserkol.ac.in/web/en/people/faculty/cds/kripaghosh/">Kripabandhu Ghosh</a>,
-        <a href="https://cse.iitkgp.ac.in/~abhijnan/">Abhijnan Chakraborty</a>
-        <br>
-        <em></em> 2024
-        <br>
-        <a href="https://arxiv.org/abs/2406.15809">arXiv</a>
-        <p></p>
-      </td>
-    </tr>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/img4.jpg' width="100%">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
+                  <div style="position: relative; top: -10px;"> 
+                    <span class="papertitle">On Anomalous Dimensions in Non-Supersymmetric Bifundamental Chern-Simons Theories</span>
+                    <br>
+                    <strong>V. Gurucharan</strong>,
+                    <a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>
+                    <br>
+                    <em>Journal of High Energy Physics</em>, 2014
+                    <br>
+                    <a href="https://link.springer.com/article/10.1007/JHEP09(2014)009">Springer</a>
+                    <p></p>
+                  </div>
+                </td>
+              </tr>
 
-	    <tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/img2.jpg' width="100%">
-    </div>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
-    <div style="position: relative; top: -25px;"> 
-          <span class="papertitle">On the higher spin spectrum of Chern-Simons theory coupled to fermions in the large flavour limit</span>
-        </a>
-        <br>
-       
-	<strong>V. Gurucharan</strong>,
-	              <a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>
-       
-        <br>
-        <em>Journal of High Energy Physics</em>, 2018
-        <br>
-        <a href="https://link.springer.com/article/10.1007/JHEP02(2018)094">Springer</a>
-        <p></p>
-      </td>
-    </tr>
+            </tbody></table>
 
-	     <tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/img3.jpg' width="100%">
-    </div>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
-    <div style="position: relative; top: -40px;"> 
-	    
-          <span class="papertitle">On the higher-spin spectrum in large N Chern-Simons vector models</span>
-        </a>
-        <br>
-       
-	    <a href="https://phy.princeton.edu/people/simone-giombi">Simone Giombi</a>,
-	<strong>V. Gurucharan</strong>,
-	    <a href="https://scholar.google.com/citations?user=AWulZwUAAAAJ&hl=en">Vladimir Kirilin</a>,
-	<a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>,
-	    <a href="https://web.umons.ac.be/pucg/en/team/skvortsov/">Evgeny Skvortsov</a>
-     
-        <br>
-        <em>Journal of High Energy Physics</em>, 2017
-        <br>
-        <a href="https://link.springer.com/article/10.1007/JHEP01(2017)058">Springer</a>
-        <p></p>
-      </td>
-    </tr>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Research Areas</h2>
+                  <p>
+                    <strong>Artificial Intelligence & Machine Learning:</strong> Large language models, natural language processing, AI safety and security, extractive summarization, model interpretability.
+                  </p>
+                  <p>
+                    <strong>Theoretical Physics:</strong> String theory, Chern-Simons theories, higher-spin theories, AdS/CFT correspondence, conformal field theories.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
 
-	     <tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/img4.jpg' width="100%">
-    </div>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle; position: relative;">
-    <div style="position: relative; top: -10px;"> 
-          <span class="papertitle">On Anomalous Dimensions in Non-Supersymmetric Bifundamental Chern-Simons Theories</span>
-        </a>
-        <br>
-	<strong>V. Gurucharan</strong>,
-	              <a href="https://www.dei.ac.in/dei/science/index.php/phy-faculty/90-physicsfaculty/185-dr-shiroman-prakash">Shiroman Prakash</a>
-        <br>
-        <em>Journal of High Energy Physics</em>, 2014
-        <br>
-        <a href="https://link.springer.com/article/10.1007/JHEP09(2014)009">Springer</a>
-        <p></p>
-      </td>
-    </tr>
+          <!-- TEACHING SECTION -->
+          <div id="teaching" class="section">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Teaching</h2>
+                  <p>
+                    I am passionate about education and knowledge sharing. Here are my teaching activities and educational contributions.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h3>Courses & Workshops</h3>
+                  <p>
+                    <strong>Machine Learning Fundamentals</strong> - Workshop series on ML basics<br>
+                    <strong>AI Safety & Ethics</strong> - Graduate seminar on responsible AI development<br>
+                    <strong>Natural Language Processing</strong> - Advanced course on NLP techniques
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h3>Mentorship</h3>
+                  <p>
+                    I actively mentor graduate students and early-career researchers in AI and theoretical physics. If you're interested in research collaboration or guidance, feel free to reach out.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+
+          <!-- PERSONAL PURSUITS SECTION -->
+          <div id="personal" class="section">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Personal Pursuits</h2>
+                  <p>
+                    Beyond research and work, I enjoy exploring various interests that keep me curious and creative.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/photography.jpg' width="100%" style="border-radius: 10px;">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <strong>Photography & Travel</strong><br>
+                  Capturing moments and exploring new places helps me see the world from different perspectives—something that often inspires my research approach.
+                  <p></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/chess.jpg' width="100%" style="border-radius: 10px;">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <strong>Chess & Strategic Games</strong><br>
+                  The strategic thinking required in chess complements the problem-solving skills I use in AI research. Always up for a game!
+                  <p></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/cooking.jpg' width="100%" style="border-radius: 10px;">
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <strong>Cooking & Culinary Experiments</strong><br>
+                  Experimenting with flavors and techniques in the kitchen mirrors the experimental nature of research—plus, it's a great way to unwind.
+                  <p></p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+
+        </td>
+      </tr>
+    </tbody></table>
+
+    <script>
+      function showSection(sectionName) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+        
+        // Remove active class from all nav items
+        const navItems = document.querySelectorAll('.nav-menu a');
+        navItems.forEach(nav => {
+          nav.classList.remove('active');
+        });
+        
+        // Show selected section
+        document.getElementById(sectionName).classList.add('active');
+        
+        // Add active class to selected nav item
+        document.getElementById(sectionName + '-nav').classList.add('active');
+	  }
+		</script>
+
+  </body>
+</html>
 
 <!-- 
     <tr onmouseout="cat3d_stop()" onmouseover="cat3d_start()" bgcolor="#ffffd0">
@@ -4156,14 +4323,14 @@ for Topologically Varying Neural Radiance Fields</span>
               </td>
             </tr>
           </tbody></table>
-        -->  
+       
 	 
 
         </td>
       </tr>
-    </table>
+    </table>   --> 
 	    <!--  <div id="globe-container">
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z9Am9HpCBXHtDa9qXcNQebKwy5rJZAgJab56Vw11hA0"></script>
-</div>  -->
+</div>  
   </body>
-</html>
+</html>-->
